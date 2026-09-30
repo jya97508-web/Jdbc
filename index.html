@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Student Management</h1>
+        <p class="subtitle">Java Servlet + JDBC + MySQL + JavaScript</p>
+
+        <form id="studentForm">
+            <input type="hidden" id="studentId">
+
+            <input id="name" type="text" placeholder="Student name" required>
+            <input id="course" type="text" placeholder="Course" required>
+            <input id="marks" type="number" min="0" max="100" placeholder="Marks" required>
+
+            <button type="submit" id="saveBtn">Add Student</button>
+            <button type="button" id="cancelBtn" class="secondary hidden">Cancel Edit</button>
+        </form>
+
+        <p id="message"></p>
+
+        <section>
+            <h2>Students</h2>
+            <button id="refreshBtn" class="secondary">Refresh</button>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Course</th>
+                            <th>Marks</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
